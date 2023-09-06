@@ -26,7 +26,7 @@ class IntroPage extends StatelessWidget {
           const SizedBox(height: 75),
 
           Text(
-            "A relaxing game and aid to become the best plant parent",
+            "A relaxing game and aid to become the best plant parent!",
             textAlign: TextAlign.center,
             style: GoogleFonts.gaegu(
               fontSize: 20,
@@ -34,10 +34,10 @@ class IntroPage extends StatelessWidget {
             )
           ),
 
-          const SizedBox(height: 5),
+          const SizedBox(height: 40),
 
           MyButton(
-            text: "Click to continue!",
+            text: "Click to Continue",
             onTap: () {
               Navigator.pushNamed(context, '/homepage');
             }),

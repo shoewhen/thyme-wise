@@ -1,14 +1,15 @@
 import "package:flutter/material.dart";
-import "package:thyme_wise/pages/settings_page.dart";
+import 'package:google_fonts/google_fonts.dart';
+import 'package:thyme_wise/pages/home_page.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class SettingsPage extends StatefulWidget {
+  const SettingsPage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<SettingsPage> createState() => _SettingsPageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _SettingsPageState extends State<SettingsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,13 +18,23 @@ class _HomePageState extends State<HomePage> {
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
 
-              SizedBox(height: 25,),
+              SizedBox(height: 50,),
+
+              Center(
+                child: Text(
+                  "Settings", 
+                  style: GoogleFonts.walterTurncoat(
+                  fontSize: 45,
+                  color: Colors.black,
+                  ),
+                ),
+              ),
 
               Align(
-                alignment: Alignment.topRight,
+                alignment: Alignment.topLeft,
                 child: IconButton(
                   padding: EdgeInsets.all(0.0),
                   icon: Image.asset('lib/images/shawnthesheepplaceholder.jpeg'),
@@ -31,7 +42,7 @@ class _HomePageState extends State<HomePage> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const SettingsPage()),
+                      MaterialPageRoute(builder: (context) => const HomePage()),
                     );
                   // Navigate to second route when tapped.
                   },
