@@ -26,7 +26,7 @@ class _SettingsPageState extends State<SettingsPage> {
               Center(
                 child: Text(
                   "Settings", 
-                  style: GoogleFonts.walterTurncoat(
+                  style: GoogleFonts.dmSerifDisplay(
                   fontSize: 45,
                   color: Colors.black,
                   ),
