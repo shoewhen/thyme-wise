@@ -12,32 +12,40 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(25.0),
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-
-              SizedBox(height: 25,),
-
-              Align(
-                alignment: Alignment.topRight,
-                child: IconButton(
-                  padding: EdgeInsets.all(0.0),
-                  icon: Image.asset('lib/images/shawnthesheepplaceholder.jpeg'),
-                  iconSize: 50,
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const SettingsPage()),
-                    );
-                  // Navigate to second route when tapped.
-                  },
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("lib/images/plantbackgroundplaceholder.jpg"),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(25.0),
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+      
+                SizedBox(height: 25,),
+      
+                Align(
+                  alignment: Alignment.topRight,
+                  child: IconButton(
+                    padding: EdgeInsets.all(0.0),
+                    icon: Image.asset('lib/images/shawnthesheepplaceholder.jpeg'),
+                    iconSize: 50,
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const SettingsPage()),
+                      );
+                    // Navigate to second route when tapped.
+                    },
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
