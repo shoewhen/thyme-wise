@@ -29,22 +29,22 @@ class _HomePageState extends State<HomePage> {
       
                 SizedBox(height: 25,),
       
-                    Align(
-                      alignment: Alignment.topRight,
-                      child: IconButton(
-                        padding: EdgeInsets.all(0.0),
-                        icon: Image.asset('lib/images/shawnthesheepplaceholder.jpeg'),
-                        iconSize: 50,
-                        
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => const SettingsPage()),
-                          );
-                        // Navigate to second route when tapped.
-                        },
-                      ),
-                    ),
+                Align(
+                  alignment: Alignment.topRight,
+                  child: IconButton(
+                    padding: EdgeInsets.all(0.0),
+                    icon: Image.asset('lib/images/shawnthesheepplaceholder.jpeg'),
+                    iconSize: 50,
+                    
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const SettingsPage()),
+                      );
+                    // Navigate to second route when tapped.
+                    },
+                  ),
+                ),
               ],
             ),
           ),
