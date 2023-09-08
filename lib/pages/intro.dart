@@ -3,8 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:thyme_wise/components/get_started_button.dart';
 
 
-class IntroPage extends StatelessWidget {
-  const IntroPage({super.key});
+class Intro extends StatelessWidget {
+  const Intro({super.key});
 
   @override
   Widget build(BuildContext context) {
