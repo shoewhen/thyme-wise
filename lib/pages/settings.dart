@@ -27,6 +27,7 @@ class Settings extends StatelessWidget {
                       IconButton(
                         padding: const EdgeInsets.all(0.0),
                         icon: const Icon(Icons.arrow_back),
+                        iconSize: 20,
                         onPressed: () {
                           Navigator.push(
                             context,
@@ -46,7 +47,7 @@ class Settings extends StatelessWidget {
                     textAlign: TextAlign.center,
                     style: GoogleFonts.dmSerifDisplay(
                       color: Colors.black,
-                      fontSize: 30
+                      fontSize: 20
                     ),
                   )
                 ),
