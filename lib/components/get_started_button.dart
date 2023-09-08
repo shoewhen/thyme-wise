@@ -18,12 +18,25 @@ class MyButton extends StatelessWidget {
         decoration: BoxDecoration(color: Color.fromARGB(255, 201, 231, 187),
         borderRadius: BorderRadius.circular(30)),
         padding: EdgeInsets.all(15),
-        child: Text(
-          text,
-          style: GoogleFonts.walterTurncoat(
-            fontSize: 25,
-            color: Color.fromARGB(255, 114, 166, 113)
-          ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(
+              text,
+              style: GoogleFonts.walterTurncoat(
+                fontSize: 25,
+                color: Color.fromARGB(255, 114, 166, 113)
+              ),
+            ),
+
+            const SizedBox(width: 10),
+
+            Icon(
+              Icons.arrow_forward,
+              color: Color.fromARGB(255, 114, 166, 113)
+            )
+          ],
         ),
       ),
     );

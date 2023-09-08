@@ -37,11 +37,11 @@ class Intro extends StatelessWidget {
           const SizedBox(height: 5),
 
           MyButton(
-            text: "Click to continue!",
-            onTap: () {
-              Navigator.pushNamed(context, '/homepage');
-            }),
-
+              text: "Click to continue",
+              onTap: () {
+                Navigator.pushNamed(context, '/homepage');
+              }
+          ),
         ]
       )
       )
