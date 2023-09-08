@@ -19,15 +19,13 @@ class Settings extends StatelessWidget {
             Stack(
               alignment: AlignmentDirectional.centerStart,
               children: [
-
-
                 Align(
                   alignment: Alignment.center,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       IconButton(
-                        padding: const EdgeInsets.all(0),
+                        padding: const EdgeInsets.all(0.0),
                         icon: const Icon(Icons.arrow_back),
                         onPressed: () {
                           Navigator.push(
