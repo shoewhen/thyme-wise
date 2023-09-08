@@ -11,46 +11,52 @@ class Settings extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(25.0),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
+            
+            const SizedBox(height: 25),
 
-            const SizedBox(height: 50),
-
-            Row(
+            Stack(
+              alignment: AlignmentDirectional.centerStart,
               children: [
+
+
                 Align(
-                  alignment: Alignment.topLeft,
-                  child: IconButton(
-                      padding: const EdgeInsets.all(0.0),
-                      icon: Icon(
-                        Icons.arrow_back,
-                        color: Colors.black,
-                        size: 30),
-                      iconSize: 50,
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => const Home()),
-                        );
-                      }
+                  alignment: Alignment.center,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      IconButton(
+                        padding: const EdgeInsets.all(0),
+                        icon: const Icon(Icons.arrow_back),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => const Home()),
+                          );
+                        }
+                      ),
+                      const Spacer(),
+                    ],
                   ),
                 ),
-                
-                Text(
-                  "Settings",
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.dmSerifDisplay(
-                    fontSize: 30,
-                    color: Colors.black
+              
+                Align(
+                  alignment: Alignment.center,
+                  child: Text(
+                    "Settings", 
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.dmSerifDisplay(
+                      color: Colors.black,
+                      fontSize: 30
+                    ),
                   )
                 ),
               ],
             ),
-
-
-            
           ],
         ),
-      )
+      ),
     );
   }
 }

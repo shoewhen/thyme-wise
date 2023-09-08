@@ -9,7 +9,7 @@ class Intro extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 201, 231, 187),
+      backgroundColor: const Color.fromARGB(255, 201, 231, 187),
       body: Padding(padding: const EdgeInsets.all(25.0),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -19,7 +19,7 @@ class Intro extends StatelessWidget {
             "THYME-WISE", 
             style: GoogleFonts.ribeyeMarrow(
               fontSize: 45,
-              color: Color.fromARGB(255, 114, 166, 113),
+              color: const Color.fromARGB(255, 114, 166, 113),
             ),
           ),
 
