@@ -19,24 +19,27 @@ class Notifications extends StatelessWidget {
         borderRadius: BorderRadius.circular(30)),
         padding: EdgeInsets.all(15),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
 
-            Icon(
-              Icons.notifications,
-              color: Colors.black
+            Row(
+              children: [
+                Icon(
+                  Icons.notifications,
+                  color: Colors.black
+                ),
+
+                const SizedBox(width: 20),
+
+                Text(
+                  text,
+                  style: GoogleFonts.dmSerifDisplay(
+                    fontSize: 18,
+                    color: Colors.black)
+                  ),
+              ],
             ),
-
-            const SizedBox(width: 20),
-
-            Text(
-              text,
-              style: GoogleFonts.dmSerifDisplay(
-                fontSize: 18,
-                color: Colors.black)
-              ),
             
-            const SizedBox(width: 150),
             
             const Icon(
                 Icons.arrow_forward_ios_rounded,

@@ -62,7 +62,7 @@ class Settings extends StatelessWidget {
               onTap: () {
                 Navigator.pushNamed(context, '/homepage');
               }
-          ),
+            ),
 
           ],
         ),
