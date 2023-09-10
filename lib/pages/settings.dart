@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:thyme_wise/components/notifications.dart';
 import 'package:thyme_wise/pages/home.dart';
+import 'package:thyme_wise/pages/intro.dart';
 
 class Settings extends StatelessWidget {
   const Settings({super.key});
