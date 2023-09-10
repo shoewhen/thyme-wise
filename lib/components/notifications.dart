@@ -24,7 +24,7 @@ class Notifications extends StatelessWidget {
 
             Row(
               children: [
-                Icon(
+                const Icon(
                   Icons.notifications,
                   color: Colors.black
                 ),

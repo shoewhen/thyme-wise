@@ -25,7 +25,7 @@ class _HomeState extends State<Home> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
       
-              SizedBox(height: 25),
+              const SizedBox(height: 25),
       
               Align(
                 alignment: Alignment.topRight,
