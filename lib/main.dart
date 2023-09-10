@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:thyme_wise/pages/settings.dart';
 import 'pages/home.dart';
 import 'pages/intro.dart';
 
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/intropage': (context) => const Intro(),
         '/homepage': (context) => const Home(),
+        '/settings': (context) => const Settings()
       }
     );
   }

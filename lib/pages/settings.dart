@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:thyme_wise/components/notifications.dart';
 import 'package:thyme_wise/pages/home.dart';
 
 class Settings extends StatelessWidget {
@@ -53,6 +54,16 @@ class Settings extends StatelessWidget {
                 ),
               ],
             ),
+
+            const SizedBox(height: 32),
+
+            Notifications(
+              text: "Notifications",
+              onTap: () {
+                Navigator.pushNamed(context, '/homepage');
+              }
+          ),
+
           ],
         ),
       ),
