@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'pages/home_page.dart';
-import 'pages/intro_page.dart';
+import 'package:thyme_wise/pages/settings.dart';
+import 'pages/home.dart';
+import 'pages/intro.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,10 +15,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: IntroPage(),
+      home: const Intro(),
       routes: {
-        '/intropage': (context) => const IntroPage(),
-        '/homepage': (context) => const HomePage(),
+        '/intropage': (context) => const Intro(),
+        '/homepage': (context) => const Home(),
+        '/settings': (context) => const Settings()
       }
     );
   }
