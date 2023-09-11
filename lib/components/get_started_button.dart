@@ -5,8 +5,8 @@ class MyButton extends StatelessWidget {
   final String text;
   final void Function()? onTap;
 
-  const MyButton ({
-    super.key, 
+  const MyButton({
+    super.key,
     required this.text,
     required this.onTap,
   });
@@ -16,9 +16,9 @@ class MyButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        decoration: BoxDecoration(color: Color.fromARGB(255, 255, 255, 255),
-        borderRadius: BorderRadius.circular(30)
-        ),
+        decoration: BoxDecoration(
+            color: Color.fromARGB(255, 255, 255, 255),
+            borderRadius: BorderRadius.circular(30)),
         padding: EdgeInsets.all(15),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -26,17 +26,10 @@ class MyButton extends StatelessWidget {
             Text(
               text,
               style: GoogleFonts.walterTurncoat(
-                fontSize: 25,
-                color: Color.fromARGB(255, 114, 166, 113)
-              ),
+                  fontSize: 25, color: Color.fromARGB(255, 114, 166, 113)),
             ),
-
             SizedBox(width: 20),
-
-            Icon(
-              Icons.arrow_forward,
-              color: Color.fromARGB(255, 114, 166, 113)
-            )
+            Icon(Icons.arrow_forward, color: Color.fromARGB(255, 114, 166, 113))
           ],
         ),
       ),
