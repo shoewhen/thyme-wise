@@ -1,6 +1,6 @@
 import "package:flutter/material.dart";
 import "package:thyme_wise/pages/settings.dart";
-import "package:thyme_wise/pages/add_plant.dart";
+import "package:thyme_wise/pages/add_\plant.dart";
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -71,7 +71,7 @@ class AddPLantButton extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const Add_Plant()),
+                            builder: (context) => const AddPlant()),
                       );
                     }))));
   }

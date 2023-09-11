@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:thyme_wise/pages/home.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Add_Plant extends StatelessWidget {
-  const Add_Plant({super.key});
+class AddPlant extends StatelessWidget {
+  const AddPlant({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +48,7 @@ class Add_Plant extends StatelessWidget {
                       child: Container(
                         margin: const EdgeInsets.only(top: 80),
                         child: Text(
-                          "Ready to add to your newest plant child?",
+                          "Ready to add your newest plant child?",
                           textAlign: TextAlign.left,
                           style: GoogleFonts.averiaLibre(
                               color: Colors.black, fontSize: 14),
