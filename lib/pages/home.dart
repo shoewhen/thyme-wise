@@ -55,24 +55,32 @@ class AddPLantButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-        color: Colors.transparent,
+      color: Colors.transparent,
+      child: Padding(
+        padding: const EdgeInsets.all(12.0),
         child: Center(
-            child: Ink(
-                decoration: const ShapeDecoration(
-                  shape: CircleBorder(),
-                  color: Colors.white,
-                ),
-                child: IconButton(
-                    padding: const EdgeInsets.all(1.0),
-                    icon: const Icon(Icons.add),
-                    iconSize: 40,
-                    color: Colors.black,
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const AddPlant()),
-                      );
-                    }))));
+          child: Ink(
+            decoration: const ShapeDecoration(
+              shape: CircleBorder(),
+              color: Colors.white,
+            ),
+      
+            child: IconButton(
+              padding: const EdgeInsets.all(0.0),
+              icon: const Icon(Icons.add),
+              iconSize: 40,
+              color: Colors.black,
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const AddPlant()),
+                );
+              }
+            )
+          )
+        ),
+      )
+    );
   }
 }

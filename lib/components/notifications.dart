@@ -5,9 +5,10 @@ class Notifications extends StatelessWidget {
   final String text;
   final void Function()? onTap;
 
-  const Notifications ({super.key, 
-  required this.text,
-  required this.onTap,
+  const Notifications ({
+    super.key, 
+    required this.text,
+    required this.onTap,
   });
 
   @override

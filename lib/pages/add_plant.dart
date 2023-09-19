@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:thyme_wise/components/plant_tile.dart';
 import 'package:thyme_wise/pages/home.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -79,6 +80,14 @@ class AddPlant extends StatelessWidget {
                 )
               )
             ),
+
+            SizedBox(height: 25),
+
+            PlantTile(
+                text: "this is a plant",
+                onTap: () {
+                  Navigator.pushNamed(context, '/homepage');
+                }),
           ],
         )
       )
