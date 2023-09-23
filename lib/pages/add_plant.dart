@@ -1,10 +1,50 @@
 import 'package:flutter/material.dart';
 import 'package:thyme_wise/components/plant_tile.dart';
+import 'package:thyme_wise/models/plant.dart';
 import 'package:thyme_wise/pages/home.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class AddPlant extends StatelessWidget {
+class AddPlant extends StatefulWidget {
   const AddPlant({super.key});
+  
+  @override
+  State<AddPlant> createState() => _AddPlantState();
+}
+
+class _AddPlantState extends State<AddPlant> {
+
+  // plant menu
+  List plantMenu = [
+    // aloe
+    Plant(
+      name: "Aloe", 
+      description: "description",
+      imagePath: "lib/images/alola-vulpix.jpeg"),
+
+    // thyme
+    Plant(
+      name: "Thyme", 
+      description: "description", 
+      imagePath: "lib/images/alola-vulpix.jpeg"),
+
+    // coriander
+    Plant(
+      name: "Coriander", 
+      description: "description", 
+      imagePath: "lib/images/alola-vulpix.jpeg"),
+
+    // sage
+    Plant(
+      name: "Sage", 
+      description: "description", 
+      imagePath: "lib/images/alola-vulpix.jpeg"),
+
+    // mint
+
+    // basil
+
+    // spider plant 
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -81,13 +121,16 @@ class AddPlant extends StatelessWidget {
               )
             ),
 
-            SizedBox(height: 25),
 
-            PlantTile(
-                text: "this is a plant",
-                onTap: () {
-                  Navigator.pushNamed(context, '/homepage');
-                }),
+            Expanded(
+              child: ListView.builder(
+                scrollDirection: Axis.vertical,
+                itemCount: plantMenu.length,
+                itemBuilder: (context, index) => PlantTile(
+                  plant: plantMenu[index],
+                ),
+              )
+            )
           ],
         )
       )
