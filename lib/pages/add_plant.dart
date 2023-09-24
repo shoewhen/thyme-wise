@@ -24,73 +24,206 @@ class _AddPlantState extends State<AddPlant> {
 
     Plant(
       name: "Aloe", 
-      scientificName: "fdsakfl;as",
+      scientificName: "Aloe vera",
       description: "description", 
       imagePath: "lib/images/alola-vulpix.jpeg"
     ),
 
     Plant(
       name: "Basil", 
-      scientificName: "asdfas",
+      scientificName: "Ocimum basilicum",
       description: "description", 
       imagePath: "lib/images/alola-vulpix.jpeg"
     ),
 
     Plant(
       name: "Bromeliad", 
-      scientificName: "asdfads",
+      scientificName: "Bromeliaceae",
       description: "description", 
       imagePath: "lib/images/alola-vulpix.jpeg"
     ),
 
     Plant(
       name: "Burro's Tail", 
-      scientificName: "asdfdsa",
+      scientificName: "Sedum morganianum",
       description: "description", 
       imagePath: "lib/images/alola-vulpix.jpeg"
     ),
 
     Plant(
       name: "Cactus", 
-      scientificName: "asdfsadfa",
+      scientificName: "Cactaceae",
       description: "description", 
       imagePath: "lib/images/alola-vulpix.jpeg"
     ),
 
     Plant(
       name: "Coriander", 
-      scientificName: "asdfas",
+      scientificName: "Coriandrum sativum",
       description: "description", 
       imagePath: "lib/images/alola-vulpix.jpeg"
     ),
 
     Plant(
       name: "Croton", 
-      scientificName: "asdfsa",
+      scientificName: "Cordiaeum variegatum",
       description: "description", 
       imagePath: "lib/images/alola-vulpix.jpeg"
     ),
 
     Plant(
-      name: "Echevaria Succulent", 
-      scientificName: "asdfsda",
+      name: "Echeveria Succulent", 
+      scientificName: "Echeveria",
       description: "description", 
       imagePath: "lib/images/alola-vulpix.jpeg"
     ),
 
     Plant(
       name: "English Ivy", 
-      scientificName: "asdfdsa",
+      scientificName: "Hedera helix",
       description: "description", 
       imagePath: "lib/images/alola-vulpix.jpeg"
     ),
 
     Plant(
-      name: "asdfdsa", 
-      scientificName: "asdfdsa",
+      name: "Fiddle-leaf fig", 
+      scientificName: "Ficus lyrata",
       description: "description", 
       imagePath: "lib/images/alola-vulpix.jpeg"
     ),
+
+    Plant(
+      name: "Inchplant", 
+      scientificName: "Tradescantia zebrina ",
+      description: "description", 
+      imagePath: "lib/images/alola-vulpix.jpeg"
+    ),
+
+    Plant(
+      name: "Jade Plant", 
+      scientificName: "Crassula ovata",
+      description: "description", 
+      imagePath: "lib/images/alola-vulpix.jpeg"
+    ),
+
+    Plant(
+      name: "Maidenhair fern", 
+      scientificName: "Adiantum",
+      description: "description", 
+      imagePath: "lib/images/alola-vulpix.jpeg"
+    ),
+
+    Plant(
+      name: "Mint", 
+      scientificName: "Mentha",
+      description: "description", 
+      imagePath: "lib/images/alola-vulpix.jpeg"
+    ),
+
+    Plant(
+      name: "Money Tree", 
+      scientificName: "Pachira aquatica",
+      description: "description", 
+      imagePath: "lib/images/alola-vulpix.jpeg"
+    ),
+
+    Plant(
+      name: "Monstera", 
+      scientificName: "Monstera deliciosa",
+      description: "description", 
+      imagePath: "lib/images/alola-vulpix.jpeg"
+    ),
+
+    Plant(
+      name: "Moth Orchid ", 
+      scientificName: "Phalaenopsis",
+      description: "description", 
+      imagePath: "lib/images/alola-vulpix.jpeg"
+    ),
+
+    Plant(
+      name: "Peace Lily", 
+      scientificName: "Spathiphyllum",
+      description: "description", 
+      imagePath: "lib/images/alola-vulpix.jpeg"
+    ),
+
+    Plant(
+      name: "Peperomia", 
+      scientificName: "Peperomia obtusifolia",
+      description: "description", 
+      imagePath: "lib/images/alola-vulpix.jpeg"
+    ),
+
+    Plant(
+      name: "Philodendron", 
+      scientificName: "Philodendron hederaceum",
+      description: "description", 
+      imagePath: "lib/images/alola-vulpix.jpeg"
+    ),
+
+    Plant(
+      name: "Ponytail Palm", 
+      scientificName: "Beaucarnea recurvata",
+      description: "description", 
+      imagePath: "lib/images/alola-vulpix.jpeg"
+    ),
+
+    Plant(
+      name: "Pothos", 
+      scientificName: "Epipremnum aureum",
+      description: "description", 
+      imagePath: "lib/images/alola-vulpix.jpeg"
+    ),
+    
+    Plant(
+      name: "Rubber Plant", 
+      scientificName: "Ficus elastica",
+      description: "description", 
+      imagePath: "lib/images/alola-vulpix.jpeg"
+    ),    
+
+    Plant(
+      name: "Sage", 
+      scientificName: "Salvia officinalis",
+      description: "description", 
+      imagePath: "lib/images/alola-vulpix.jpeg"
+    ),    
+
+    Plant(
+      name: "Snake Plant", 
+      scientificName: "Dracaena trifasciata",
+      description: "description", 
+      imagePath: "lib/images/alola-vulpix.jpeg"
+    ),    
+
+    Plant(
+      name: "Spider Plant", 
+      scientificName: "Chlorophytum comosum",
+      description: "description", 
+      imagePath: "lib/images/alola-vulpix.jpeg"
+    ),   
+
+    Plant(
+      name: "String of Pearls", 
+      scientificName: "Curio Rowlyanus",
+      description: "description", 
+      imagePath: "lib/images/alola-vulpix.jpeg"
+    ),    
+
+    Plant(
+      name: "Thyme", 
+      scientificName: "Thymus vulgaris",
+      description: "description", 
+      imagePath: "lib/images/alola-vulpix.jpeg"
+    ),   
+
+    Plant(
+      name: "Venus Fly Trap", 
+      scientificName: "Dionaea muscipula",
+      description: "description", 
+      imagePath: "lib/images/alola-vulpix.jpeg"
+    ),    
   ];
 
   @override

@@ -20,15 +20,15 @@ class PlantTile extends StatelessWidget {
       padding: const EdgeInsets.all(10),
       child: Row(
         children: [
+          
+
           // image
-          Expanded(
-            child: Image.asset(
-              plant.imagePath,
-              width: 75,
-            ),
+          Image.asset(
+            plant.imagePath,
+            width: 100,
           ),
 
-          const SizedBox(width: 20),
+          const SizedBox(width: 10),
 
           // text
           Expanded(
