@@ -21,28 +21,39 @@ class PlantTile extends StatelessWidget {
       child: Row(
         children: [
           // image
-          Image.asset(
-            plant.imagePath,
-            height: 140
+          Expanded(
+            child: Image.asset(
+              plant.imagePath,
+              width: 75,
+            ),
           ),
 
           const SizedBox(width: 20),
 
           // text
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                plant.name,
-                style: GoogleFonts.dmSerifDisplay(fontSize: 20),
-              ),
-
-              // description
-              Text(
-                plant.description,
-                style: GoogleFonts.averiaLibre(fontSize: 15)
-              ),
-            ],
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  plant.name,
+                  style: GoogleFonts.dmSerifDisplay(fontSize: 15),
+                ),
+          
+                Text(
+                  plant.scientificName,
+                  style: GoogleFonts.averiaLibre(
+                    fontStyle: FontStyle.italic,
+                    fontSize: 10)
+                ),
+          
+                // description
+                Text(
+                  plant.description,
+                  style: GoogleFonts.averiaLibre(fontSize: 10),
+                ),
+              ],
+            ),
           ),
         ],
       ),

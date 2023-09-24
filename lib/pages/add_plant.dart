@@ -15,35 +15,82 @@ class _AddPlantState extends State<AddPlant> {
 
   // plant menu
   List plantMenu = [
-    // aloe
+    Plant(
+      name: "African Violet", 
+      scientificName: "Saintpaulia ionantha",
+      description: "can this piece of long text please work help help help help help help", 
+      imagePath: "lib/images/alola-vulpix.jpeg"
+    ),
+
     Plant(
       name: "Aloe", 
-      description: "description",
-      imagePath: "lib/images/alola-vulpix.jpeg"),
-
-    // thyme
-    Plant(
-      name: "Thyme", 
+      scientificName: "fdsakfl;as",
       description: "description", 
-      imagePath: "lib/images/alola-vulpix.jpeg"),
+      imagePath: "lib/images/alola-vulpix.jpeg"
+    ),
 
-    // coriander
+    Plant(
+      name: "Basil", 
+      scientificName: "asdfas",
+      description: "description", 
+      imagePath: "lib/images/alola-vulpix.jpeg"
+    ),
+
+    Plant(
+      name: "Bromeliad", 
+      scientificName: "asdfads",
+      description: "description", 
+      imagePath: "lib/images/alola-vulpix.jpeg"
+    ),
+
+    Plant(
+      name: "Burro's Tail", 
+      scientificName: "asdfdsa",
+      description: "description", 
+      imagePath: "lib/images/alola-vulpix.jpeg"
+    ),
+
+    Plant(
+      name: "Cactus", 
+      scientificName: "asdfsadfa",
+      description: "description", 
+      imagePath: "lib/images/alola-vulpix.jpeg"
+    ),
+
     Plant(
       name: "Coriander", 
+      scientificName: "asdfas",
       description: "description", 
-      imagePath: "lib/images/alola-vulpix.jpeg"),
+      imagePath: "lib/images/alola-vulpix.jpeg"
+    ),
 
-    // sage
     Plant(
-      name: "Sage", 
+      name: "Croton", 
+      scientificName: "asdfsa",
       description: "description", 
-      imagePath: "lib/images/alola-vulpix.jpeg"),
+      imagePath: "lib/images/alola-vulpix.jpeg"
+    ),
 
-    // mint
+    Plant(
+      name: "Echevaria Succulent", 
+      scientificName: "asdfsda",
+      description: "description", 
+      imagePath: "lib/images/alola-vulpix.jpeg"
+    ),
 
-    // basil
+    Plant(
+      name: "English Ivy", 
+      scientificName: "asdfdsa",
+      description: "description", 
+      imagePath: "lib/images/alola-vulpix.jpeg"
+    ),
 
-    // spider plant 
+    Plant(
+      name: "asdfdsa", 
+      scientificName: "asdfdsa",
+      description: "description", 
+      imagePath: "lib/images/alola-vulpix.jpeg"
+    ),
   ];
 
   @override
@@ -109,18 +156,17 @@ class _AddPlantState extends State<AddPlant> {
               child: TextField(
                 decoration: InputDecoration(
                   focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey),
+                    borderSide: const BorderSide(color: Colors.grey),
                     borderRadius: BorderRadius.circular(20),
                   ),
                   enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey),
+                    borderSide: const BorderSide(color: Colors.grey),
                     borderRadius: BorderRadius.circular(20)
                   ),
                   hintText: "Search here...",
                 )
               )
             ),
-
 
             Expanded(
               child: ListView.builder(

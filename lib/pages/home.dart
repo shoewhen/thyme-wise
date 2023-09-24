@@ -39,7 +39,7 @@ class _HomeState extends State<Home> {
                     );
                   }),
             ),
-            const SizedBox(height: 600),
+            const SizedBox(height: 575),
             const Align(
                 alignment: Alignment.bottomCenter, child: AddPLantButton())
           ],
