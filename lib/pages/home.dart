@@ -28,6 +28,7 @@ class _HomeState extends State<Home> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
+              
               const SizedBox(height: 25),
               Align(
                 alignment: Alignment.topRight,
@@ -40,17 +41,33 @@ class _HomeState extends State<Home> {
                       context,
                       MaterialPageRoute(builder: (context) => const Settings()),
                     );
-                  }),
+                  }
+                ),
               ),
-              //const SizedBox(height: 575),
+
+              Expanded(
+                child: Consumer<PlantCatalog>(
+                  builder: (context, value, child) => Scaffold(
+                    body: ListView.builder(
+                      itemCount: value.userPlants.length,
+                      itemBuilder: (context, index) {
+                        final Plant plant = value.userPlants[index];
+                        final String plantName = plant.name;
+                        return ListTile(
+                          title: Text(plantName),
+                        );
+                      },
+                    )
+                  ),
+                ),
+              ),
+
+              
               const Align(
-                alignment: Alignment.center, 
+                alignment: Alignment.bottomCenter, 
                 child: Column(
                   children: [
-                    
-                    AddedPlants(),
                     AddPLantButton(),
-                    
                   ],
                 )
               ),
@@ -62,33 +79,7 @@ class _HomeState extends State<Home> {
   }
 }
 
-class AddedPlants extends StatelessWidget {
-  const AddedPlants({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: 200,
-      child: Consumer<PlantCatalog>(
-        builder: (context, value, child) => Scaffold(
-          body: ListView.builder(
-            itemCount: value.plantMenu.length,
-            itemBuilder: (context, index) {
-              final Plant plant = value.plantMenu[index];
-              final String plantName = plant.name;
-              return Container(
-                decoration: BoxDecoration(color: Colors.white),
-                child: ListTile(
-                  title: Text(plantName),
-                ),
-              );
-            },
-          )
-        ),
-      ),
-    );
-  }
-}
 
 class AddPLantButton extends StatelessWidget {
   const AddPLantButton({super.key});

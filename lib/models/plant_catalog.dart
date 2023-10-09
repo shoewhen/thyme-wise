@@ -223,7 +223,7 @@ class PlantCatalog extends ChangeNotifier {
   List<Plant> get userPlants => _userPlants;
 
   // add to homepage
-  void addToPage(Plant plantItem, int quantity)
+  void addToCollection(Plant plantItem, int quantity)
   {
     for (int i = 0; i < quantity; i++)
     {
@@ -233,11 +233,9 @@ class PlantCatalog extends ChangeNotifier {
   }
 
   // remove from homepage
-  void removeFromCart(Plant plant)
+  void removeFromCollection(Plant plant)
   {
     _userPlants.remove(plant);
     notifyListeners();
   }
-
-  void addToHome(Plant plant) {}
 }
