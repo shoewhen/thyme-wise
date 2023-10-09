@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:thyme_wise/models/plant_catalog.dart';
 import 'package:thyme_wise/pages/settings.dart';
 import 'pages/home.dart';
 import 'pages/intro.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => PlantCatalog(),
+      child: const MyApp()
+    )
+  );
 }
 
 class MyApp extends StatelessWidget {
