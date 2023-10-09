@@ -17,9 +17,10 @@ class AddPlantButton extends StatelessWidget {
       onTap: onTap,
       child: Container(
         decoration: BoxDecoration(
-            color: Color.fromARGB(122, 255, 255, 255),
-            borderRadius: BorderRadius.circular(10)),
-        padding: EdgeInsets.all(5),
+          color: Color.fromARGB(121, 255, 255, 255),
+          borderRadius: BorderRadius.circular(10)
+        ),
+        padding: EdgeInsets.all(7),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
