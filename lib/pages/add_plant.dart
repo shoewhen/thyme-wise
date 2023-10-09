@@ -16,11 +16,9 @@ class AddPlant extends StatefulWidget {
 
 class _AddPlantState extends State<AddPlant> {
 
-  void navigateToHome(int index){
-
+  void navigateToHome(int index) {
     final catalog = context.read<PlantCatalog>();
     final plantMenu = catalog.plantMenu;
-
     Navigator.push(
       context,
       MaterialPageRoute(

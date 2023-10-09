@@ -238,4 +238,6 @@ class PlantCatalog extends ChangeNotifier {
     _userPlants.remove(plant);
     notifyListeners();
   }
+
+  void addToHome(Plant plant) {}
 }
