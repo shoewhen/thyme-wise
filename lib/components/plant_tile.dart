@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:thyme_wise/components/add_plant_button.dart';
-import 'package:thyme_wise/components/get_started_button.dart';
 import 'package:thyme_wise/models/plant.dart';
-import 'package:thyme_wise/models/plant_catalog.dart';
 
 class PlantTile extends StatelessWidget {
   final Plant plant;

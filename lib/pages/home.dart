@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:provider/provider.dart";
+import "package:thyme_wise/components/user_plant_object.dart";
 import "package:thyme_wise/models/plant.dart";
 import "package:thyme_wise/models/plant_catalog.dart";
 import "package:thyme_wise/pages/settings.dart";
@@ -54,9 +55,10 @@ class _HomeState extends State<Home> {
                         itemCount: value.userPlants.length,
                         itemBuilder: (context, index) {
                           final Plant plant = value.userPlants[index];
-                          final String plantName = plant.name;
-                          return ListTile(
-                            title: Text(plantName),
+                          //final String plantName = plant.name;
+                          return UserPlants(
+                            plant: plant, 
+                            onTap: () {  },
                           );
                         },
                       )
