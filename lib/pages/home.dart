@@ -46,18 +46,21 @@ class _HomeState extends State<Home> {
               ),
 
               Expanded(
-                child: Consumer<PlantCatalog>(
-                  builder: (context, value, child) => Scaffold(
-                    body: ListView.builder(
-                      itemCount: value.userPlants.length,
-                      itemBuilder: (context, index) {
-                        final Plant plant = value.userPlants[index];
-                        final String plantName = plant.name;
-                        return ListTile(
-                          title: Text(plantName),
-                        );
-                      },
-                    )
+                child: Container(
+                  color: Colors.white,
+                  child: Consumer<PlantCatalog>(
+                    builder: (context, value, child) => Scaffold(
+                      body: ListView.builder(
+                        itemCount: value.userPlants.length,
+                        itemBuilder: (context, index) {
+                          final Plant plant = value.userPlants[index];
+                          final String plantName = plant.name;
+                          return ListTile(
+                            title: Text(plantName),
+                          );
+                        },
+                      )
+                    ),
                   ),
                 ),
               ),
