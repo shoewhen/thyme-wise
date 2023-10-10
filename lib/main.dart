@@ -21,12 +21,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: const Intro(),
-        routes: {
-          '/intropage': (context) => const Intro(),
-          '/homepage': (context) => const Home(),
-          '/settings': (context) => const Settings(),
-        });
+      debugShowCheckedModeBanner: false,
+      home: const Intro(),
+      routes: {
+        '/intropage': (context) => const Intro(),
+        '/homepage': (context) => const Home(),
+        '/settings': (context) => const Settings(),
+      }
+    );
   }
 }

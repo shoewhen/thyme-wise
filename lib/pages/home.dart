@@ -1,10 +1,11 @@
 import "package:flutter/material.dart";
 import "package:provider/provider.dart";
-import "package:thyme_wise/components/user_plant_object.dart";
+import 'package:thyme_wise/components/user_tile.dart';
 import "package:thyme_wise/models/plant.dart";
 import "package:thyme_wise/models/plant_catalog.dart";
 import "package:thyme_wise/pages/settings.dart";
 import "package:thyme_wise/pages/add_plant.dart";
+import "package:thyme_wise/pages/user_plant_details.dart";
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -14,6 +15,20 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+
+  void navigateToUserDetails(int index) {
+    final catalog = context.read<PlantCatalog>();
+    final plantMenu = catalog.plantMenu;
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => UserPlantDetails(
+          plant: plantMenu[index],
+        )
+      )
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,27 +62,24 @@ class _HomeState extends State<Home> {
               ),
 
               Expanded(
-                child: Container(
-                  color: Colors.white,
-                  child: Consumer<PlantCatalog>(
-                    builder: (context, value, child) => Scaffold(
-                      body: ListView.builder(
-                        itemCount: value.userPlants.length,
-                        itemBuilder: (context, index) {
-                          final Plant plant = value.userPlants[index];
-                          //final String plantName = plant.name;
-                          return UserPlants(
-                            plant: plant, 
-                            onTap: () {  },
-                          );
-                        },
-                      )
-                    ),
+                child: Consumer<PlantCatalog>(
+                  builder: (context, value, child) => Scaffold(
+                    backgroundColor: Colors.transparent,
+                    body: ListView.builder(
+                      cacheExtent: 6,
+                      itemCount: value.userPlants.length < 6 ? value.userPlants.length : 6,
+                      itemBuilder: (context, index) {
+                        final Plant plant = value.userPlants[index];
+                        return UserTile(
+                          plant: plant, 
+                          onTap: () => navigateToUserDetails(index)
+                        );
+                      },
+                    )
                   ),
                 ),
               ),
 
-              
               const Align(
                 alignment: Alignment.bottomCenter, 
                 child: Column(

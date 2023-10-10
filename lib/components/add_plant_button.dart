@@ -18,16 +18,16 @@ class AddPlantButton extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           color: Color.fromARGB(121, 255, 255, 255),
-          borderRadius: BorderRadius.circular(10)
+          borderRadius: BorderRadius.circular(15)
         ),
-        padding: EdgeInsets.all(7),
+        padding: EdgeInsets.all(10),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               text,
               style: GoogleFonts.averiaLibre(
-                fontSize: 10, color: Color.fromARGB(255, 0, 0, 0)
+                fontSize: 16, color: Color.fromARGB(255, 114, 166, 113)
               ),
             ),
           ],

@@ -5,15 +5,15 @@ import 'package:thyme_wise/models/plant.dart';
 import 'package:thyme_wise/models/plant_catalog.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class PlantDetails extends StatefulWidget {
+class UserPlantDetails extends StatefulWidget {
   final Plant plant;
-  const PlantDetails({super.key, required this.plant});
+  const UserPlantDetails({super.key, required this.plant});
 
   @override
-  State<PlantDetails> createState() => _PlantDetailsState();
+  State<UserPlantDetails> createState() => _UserPlantDetailsState();
 }
 
-class _PlantDetailsState extends State<PlantDetails> {
+class _UserPlantDetailsState extends State<UserPlantDetails> {
   final int one = 1;
 
   void addToCollection() {

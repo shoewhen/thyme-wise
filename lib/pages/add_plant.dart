@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:thyme_wise/components/plant_tile.dart';
-import 'package:thyme_wise/models/plant.dart';
 import 'package:thyme_wise/models/plant_catalog.dart';
 import 'package:thyme_wise/pages/home.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -16,7 +15,7 @@ class AddPlant extends StatefulWidget {
 
 class _AddPlantState extends State<AddPlant> {
 
-  void navigateToHome(int index) {
+  void navigateToPlantDetails(int index) {
     final catalog = context.read<PlantCatalog>();
     final plantMenu = catalog.plantMenu;
     Navigator.push(
@@ -114,7 +113,7 @@ class _AddPlantState extends State<AddPlant> {
                 itemCount: plantMenu.length,
                 itemBuilder: (context, index) => PlantTile(
                   plant: plantMenu[index],
-                  onTap: () => navigateToHome(index)
+                  onTap: () => navigateToPlantDetails(index)
                 ),
               )
             )
