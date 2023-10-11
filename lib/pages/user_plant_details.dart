@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:thyme_wise/components/add_plant_button.dart';
 import 'package:thyme_wise/models/plant.dart';
-import 'package:thyme_wise/models/plant_catalog.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class UserPlantDetails extends StatefulWidget {
@@ -14,35 +11,6 @@ class UserPlantDetails extends StatefulWidget {
 }
 
 class _UserPlantDetailsState extends State<UserPlantDetails> {
-  final int one = 1;
-
-  void addToCollection() {
-    final catalog = context.read<PlantCatalog>();
-    catalog.addToCollection(widget.plant, one);
-    showDialog(
-      context: context,
-      barrierDismissible: false,
-      builder: (context) => AlertDialog(
-        backgroundColor: Color.fromARGB(255, 201, 231, 187),
-        content: const Text("please work",
-          style: TextStyle(color: Colors.white),
-          textAlign: TextAlign.center),
-          actions: [
-            IconButton(
-              onPressed: () {
-                Navigator.pop(context);
-                Navigator.pop(context);
-                Navigator.pop(context);
-              },
-              icon: const Icon(
-                Icons.done,
-                color: Colors.white,
-              )
-            )
-          ],
-      )
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -133,19 +101,6 @@ class _UserPlantDetailsState extends State<UserPlantDetails> {
             ],
             )
           ),
-          Container(
-            color: const Color.fromARGB(255, 201, 231, 187),
-            padding: const EdgeInsets.all(25),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                AddPlantButton(
-                  text: "Add to your collection!",
-                  onTap: addToCollection,
-                )
-              ],
-            )
-          )
         ],
       )
     );

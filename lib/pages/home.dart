@@ -66,8 +66,7 @@ class _HomeState extends State<Home> {
                   builder: (context, value, child) => Scaffold(
                     backgroundColor: Colors.transparent,
                     body: ListView.builder(
-                      cacheExtent: 6,
-                      itemCount: value.userPlants.length < 6 ? value.userPlants.length : 6,
+                      itemCount: value.userPlants.length < 6 ? value.userPlants.length: 6,
                       itemBuilder: (context, index) {
                         final Plant plant = value.userPlants[index];
                         return UserTile(
