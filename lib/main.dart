@@ -4,14 +4,15 @@ import 'package:thyme_wise/models/plant_catalog.dart';
 import 'package:thyme_wise/pages/settings.dart';
 import 'pages/home.dart';
 import 'pages/intro.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
-void main() {
-  runApp(
-    ChangeNotifierProvider(
-      create: (context) => PlantCatalog(),
-      child: const MyApp()
-    )
-  );
+void main() async {
+  // initialize hive
+  await Hive.initFlutter();
+  var _myBox = await Hive.openBox('userinfo');
+
+  runApp(ChangeNotifierProvider(
+      create: (context) => PlantCatalog(), child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -21,14 +22,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: const Intro(),
-      routes: {
-        '/intropage': (context) => const Intro(),
-        '/homepage': (context) => const Home(),
-        '/settings': (context) => const Settings(),
-        
-      }
-    );
+        debugShowCheckedModeBanner: false,
+        home: const Intro(),
+        routes: {
+          '/intropage': (context) => const Intro(),
+          '/homepage': (context) => const Home(),
+          '/settings': (context) => const Settings(),
+        });
   }
 }
