@@ -24,7 +24,7 @@ class _PlantDetailsState extends State<PlantDetails> {
       barrierDismissible: false,
       builder: (context) => AlertDialog(
         backgroundColor: Color.fromARGB(255, 201, 231, 187),
-        content: const Text("please work",
+        content: const Text("Successfully added to your collection!",
           style: TextStyle(color: Colors.white),
           textAlign: TextAlign.center),
           actions: [
@@ -55,82 +55,128 @@ class _PlantDetailsState extends State<PlantDetails> {
       body: Column(
         children: [
           Expanded(
-            child: ListView(
-            children: [
-              Image.asset(
-                widget.plant.imagePath,
-                height: 200,
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Text(
-                widget.plant.name,
-                textAlign: TextAlign.center,
-                style: GoogleFonts.dmSerifDisplay(
-                  color: Colors.black, fontSize: 20),
-              ),
-              Text(
-                widget.plant.scientificName,
-                textAlign: TextAlign.center,
-                style: GoogleFonts.dmSerifDisplay(
-                  color: Colors.black, fontSize: 14),
-              ),
-              SizedBox(height: 10),
-              Row(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25.0),
+              child: ListView(
                 children: [
-                  SizedBox(width: 16),
+                  Image.asset(
+                    widget.plant.imagePath,
+                    height: 200,
+                  ),
+            
+                  SizedBox(height: 20),
+                  
                   Text(
-                    "Watering: " + widget.plant.watering,
-                    textAlign: TextAlign.left,
+                    widget.plant.name,
+                    textAlign: TextAlign.center,
                     style: GoogleFonts.dmSerifDisplay(
-                      color: Colors.black, fontSize: 14
+                      color: Colors.black, fontSize: 20),
+                  ),
+                  Text(
+                    widget.plant.scientificName,
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.dmSerifDisplay(
+                      color: Colors.black, fontSize: 14),
+                  ),
+            
+                  SizedBox(height: 10),
+
+                  RichText(
+                    text: TextSpan(
+                      children: <TextSpan>[
+                        TextSpan(
+                          text: "Watering: ",
+                          style: TextStyle(
+                            color: Colors.grey[900],
+                            fontWeight: FontWeight.bold,
+                            fontSize: 14
+                          )
+                        ),
+                        TextSpan(
+                          text: widget.plant.watering,
+                          style: TextStyle(
+                            color: Colors.grey[900],
+                            fontSize: 14
+                          )
+                        ),
+                      ]
                     )
                   ),
-                ],
-              ),
-              Row(
-                children: [
-                  SizedBox(width: 16),
-                  Text(
-                    "Growing Conditions: " + widget.plant.growingConditions,
-                    style: GoogleFonts.dmSerifDisplay(
-                      color: Colors.black, fontSize: 14
+            
+                  
+                  RichText(
+                    text: TextSpan(
+                      children: <TextSpan>[
+                        TextSpan(
+                          text: "Growing Conditions: ",
+                          style: TextStyle(
+                            color: Colors.grey[900],
+                            fontWeight: FontWeight.bold,
+                            fontSize: 14
+                          )
+                        ),
+                        TextSpan(
+                          text: widget.plant.growingConditions,
+                          style: TextStyle(
+                            color: Colors.grey[900],
+                            fontSize: 14
+                          )
+                        ),
+                      ]
                     )
                   ),
-                ],
-              ),
-              Row(
-                children: [
-                  SizedBox(width: 16),
-                  Text(
-                    "Size: " + widget.plant.size,
-                    style: GoogleFonts.dmSerifDisplay(
-                      color: Colors.black, fontSize: 14
+                  RichText(
+                    text: TextSpan(
+                      children: <TextSpan>[
+                        TextSpan(
+                          text: "Size: ",
+                          style: TextStyle(
+                            color: Colors.grey[900],
+                            fontWeight: FontWeight.bold,
+                            fontSize: 14
+                          )
+                        ),
+                        TextSpan(
+                          text: widget.plant.size,
+                          style: TextStyle(
+                            color: Colors.grey[900],
+                            fontSize: 14
+                          )
+                        ),
+                      ]
                     )
                   ),
-                ],
-              ),
-              Row(
-                children: [
-                  SizedBox(width: 16),
-                  Text(
-                    "Difficulty: " + widget.plant.difficulty,
-                    style: GoogleFonts.dmSerifDisplay(
-                      color: Colors.black, fontSize: 14
+                  RichText(
+                    text: TextSpan(
+                      children: <TextSpan>[
+                        TextSpan(
+                          text: "Difficulty: ",
+                          style: TextStyle(
+                            color: Colors.grey[900],
+                            fontWeight: FontWeight.bold,
+                            fontSize: 14
+                          )
+                        ),
+                        TextSpan(
+                          text: widget.plant.difficulty,
+                          style: TextStyle(
+                            color: Colors.grey[900],
+                            fontSize: 14
+                          )
+                        ),
+                      ]
                     )
                   ),
+                  Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Text(
+                      widget.plant.description,
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.dmSerifDisplay(),
+                    ),
+                  )
                 ],
               ),
-              Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Text(
-                  widget.plant.description,
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.dmSerifDisplay(),
-                ),
-              )
-            ],
             )
           ),
           Container(

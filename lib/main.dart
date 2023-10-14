@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:thyme_wise/models/plant_catalog.dart';
 import 'package:thyme_wise/pages/settings.dart';
-import 'package:thyme_wise/pages/user_plant_details.dart';
 import 'pages/home.dart';
 import 'pages/intro.dart';
 
