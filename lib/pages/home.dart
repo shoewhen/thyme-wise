@@ -29,7 +29,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Container(
+      body: Container(
       decoration: const BoxDecoration(
         image: DecorationImage(
           image: AssetImage("lib/images/plantbackgroundplaceholder.jpg"),
@@ -56,50 +56,49 @@ class _HomeState extends State<Home> {
                   }),
             ),
             Expanded(
-              child: ListView(children: [
-                SizedBox(
-                  height: 100,
-                  child: Consumer<PlantCatalog>(
-                    builder: (context, value, child) => Scaffold(
+              child: ListView(
+                //physics: NeverScrollableScrollPhysics(),
+                children: [
+                  SizedBox(
+                    height: 100,
+                    child: Consumer<PlantCatalog>(
+                      builder: (context, value, child) => Scaffold(
                         backgroundColor: Colors.transparent,
                         body: ListView.builder(
                           shrinkWrap: true,
                           scrollDirection: Axis.horizontal,
-                          itemCount: value.userPlants.length < 6
-                              ? value.userPlants.length
-                              : 6,
-                          itemBuilder: (context, index) {
-                            final Plant plant = value.userPlants[index];
-                            if (index < 3) {
-                              return UserTile(
-                                  plant: plant,
-                                  onTap: () => navigateToUserDetails(index));
-                            }
-                          },
-                        )),
-                  ),
-                ),
-                SizedBox(
-                  height: 100,
-                  child: Consumer<PlantCatalog>(
-                    builder: (context, value, child) => Scaffold(
-                        backgroundColor: Colors.transparent,
-                        body: ListView.builder(
-                          shrinkWrap: true,
-                          scrollDirection: Axis.horizontal,
-                          itemCount: value.userPlants.length < 6
-                              ? value.userPlants.length
-                              : 6,
+                          itemCount: value.userPlants.length < 6 ? value.userPlants.length : 6,
                           itemBuilder: (context, index) {
                             final Plant plant = value.userPlants[index];
                             return UserTile(
-                                plant: plant,
-                                onTap: () => navigateToUserDetails(index));
+                              plant: plant,
+                              onTap: () => navigateToUserDetails(index));
                           },
-                        )),
+                        )
+                      ),
+                    ),
                   ),
-                )
-              ]),
+                /*SizedBox(
+                    height: 100,
+                    child: Consumer<PlantCatalog>(
+                      builder: (context, value, child) => Scaffold(
+                          backgroundColor: Colors.transparent,
+                          body: ListView.builder(
+                            shrinkWrap: true,
+                            scrollDirection: Axis.horizontal,
+                            itemCount: value.userPlants.length < 6 ? value.userPlants.length : 6,
+                            itemBuilder: (context, index) {
+                              final Plant plant = value.userPlants[index];
+                              return UserTile(
+                                  plant: plant,
+                                  onTap: () => navigateToUserDetails(index));
+                            },
+                          )
+                        ),
+                    ),
+                  )*/
+                ]
+              ),
             ),
             const Align(
                 alignment: Alignment.bottomCenter,
