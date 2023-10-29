@@ -5,7 +5,6 @@ import "package:thyme_wise/models/plant.dart";
 import "package:thyme_wise/models/plant_catalog.dart";
 import "package:thyme_wise/pages/settings.dart";
 import "package:thyme_wise/pages/add_plant.dart";
-import "package:thyme_wise/pages/user_plant_details.dart";
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -15,16 +14,6 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  void navigateToUserDetails(int index) {
-    final catalog = context.read<PlantCatalog>();
-    final plantMenu = catalog.plantMenu;
-    Navigator.push(
-        context,
-        MaterialPageRoute(
-            builder: (context) => UserPlantDetails(
-                  plant: plantMenu[index],
-                )));
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -42,76 +31,53 @@ class _HomeState extends State<Home> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             const SizedBox(height: 25),
+            /*
             Align(
               alignment: Alignment.topRight,
               child: IconButton(
-                  padding: const EdgeInsets.all(0.0),
-                  icon: Image.asset('lib/images/alola-vulpix.jpeg'),
-                  iconSize: 50,
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const Settings()),
-                    );
-                  }),
+                padding: const EdgeInsets.all(0.0),
+                icon: Image.asset('lib/images/alola-vulpix.jpeg'),
+                iconSize: 50,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Settings()),
+                  );
+                }
+              ),
             ),
+            */
             Expanded(
-              child: ListView(
-                //physics: NeverScrollableScrollPhysics(),
-                children: [
-                  
-                  SizedBox(
-                    height: 100,
-                    child: Consumer<PlantCatalog>(
-                      builder: (context, value, child) => Scaffold(
-                        backgroundColor: Colors.transparent,
-                        body: ListView.builder(
-                          shrinkWrap: true,
-                          scrollDirection: Axis.horizontal,
-                          itemCount: value.userPlants.length < 6 ? value.userPlants.length : 6,
-                          itemBuilder: (context, index) {
-                            final Plant plant = value.userPlants[index];
-                            return UserTile(
-                              plant: plant,
-                              onTap: () => navigateToUserDetails(index));
-                          },
-                        )
-                      ),
-                    ),
-                  ),
-                /*SizedBox(
-                    height: 100,
-                    child: Consumer<PlantCatalog>(
-                      builder: (context, value, child) => Scaffold(
-                          backgroundColor: Colors.transparent,
-                          body: ListView.builder(
-                            shrinkWrap: true,
-                            scrollDirection: Axis.horizontal,
-                            itemCount: value.userPlants.length < 6 ? value.userPlants.length : 6,
-                            itemBuilder: (context, index) {
-                              final Plant plant = value.userPlants[index];
-                              return UserTile(
-                                  plant: plant,
-                                  onTap: () => navigateToUserDetails(index));
-                            },
-                          )
-                        ),
-                    ),
-                  )*/
-                ]
+              child: Consumer<PlantCatalog>(
+                builder: (context, value, child) => Scaffold(
+                  backgroundColor: Colors.transparent,
+                  body: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: value.userPlants.length,
+                    itemBuilder: (context, index) {
+                      final Plant plant = value.userPlants[index];
+                      return UserTile(
+                        plant: plant,
+                        onTap: () {
+                          
+                        },
+                      );
+                    },
+                  )
+                ),
               ),
             ),
             const Align(
-                alignment: Alignment.bottomCenter,
-                child: Column(
-                  children: [
-                    AddPLantButton(),
-                  ],
-                )),
+              alignment: Alignment.bottomCenter,
+              child: Column(
+                children: [ AddPLantButton() ],
+              )
+            ),
           ],
         ),
       ),
-    ));
+      )
+    );
   }
 }
 

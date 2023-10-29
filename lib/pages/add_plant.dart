@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:thyme_wise/components/plant_tile.dart';
 import 'package:thyme_wise/models/plant_catalog.dart';
-import 'package:thyme_wise/pages/home.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:thyme_wise/pages/plant_details.dart';
 
@@ -53,11 +52,7 @@ class _AddPlantState extends State<AddPlant> {
                         icon: const Icon(Icons.arrow_back),
                         iconSize: 20,
                         onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const Home()),
-                          );
+                          Navigator.pop(context);
                         }
                       ),
                       const Spacer(),
@@ -90,7 +85,7 @@ class _AddPlantState extends State<AddPlant> {
 
             const SizedBox(height: 25),
 
-            Padding(
+            /* Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10.0),
               child: TextField(
                 decoration: InputDecoration(
@@ -106,6 +101,7 @@ class _AddPlantState extends State<AddPlant> {
                 )
               )
             ),
+            */
 
             Expanded(
               child: ListView.builder(

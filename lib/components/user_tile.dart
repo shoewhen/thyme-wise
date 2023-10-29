@@ -21,7 +21,7 @@ class UserTile extends StatelessWidget {
           children: [
             Image.asset(
               plant.imagePath,
-              width: 100,
+              width: 150,
             ),
           ],
         ),

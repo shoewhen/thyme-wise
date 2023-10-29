@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:lottie/lottie.dart';
 import 'package:thyme_wise/components/get_started_button.dart';
 
 class Intro extends StatelessWidget {
@@ -21,6 +22,7 @@ class Intro extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 75),
+              Lottie.asset('lib/images/plantanimation.json'),
               Text("A relaxing game and aid to become the best plant parent!",
                   textAlign: TextAlign.center,
                   style: GoogleFonts.gaegu(

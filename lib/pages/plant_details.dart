@@ -5,6 +5,8 @@ import 'package:thyme_wise/models/plant.dart';
 import 'package:thyme_wise/models/plant_catalog.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:thyme_wise/pages/add_plant.dart';
+import 'package:thyme_wise/pages/home.dart';
 
 class PlantDetails extends StatefulWidget {
   final Plant plant;
@@ -16,7 +18,6 @@ class PlantDetails extends StatefulWidget {
 
 class _PlantDetailsState extends State<PlantDetails> {
   final int one = 1;
-  final _myBox = Hive.box('userinfo');
 
   void addToCollection() {
     final catalog = context.read<PlantCatalog>();
@@ -64,13 +65,59 @@ class _PlantDetailsState extends State<PlantDetails> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        foregroundColor: Colors.grey[900],
-      ),
       body: Column(
         children: [
+          Padding(
+            padding: const EdgeInsets.all(25.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                const SizedBox(height: 25),
+              Stack(alignment: AlignmentDirectional.centerStart, 
+                children: [
+                  Align(
+                    alignment: Alignment.center,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        IconButton(
+                          padding: const EdgeInsets.all(0.0),
+                          icon: const Icon(Icons.arrow_back),
+                          iconSize: 20,
+                          onPressed: () {
+                            Navigator.pop(context);
+                          }
+                        ),
+                        const Spacer(),
+                      ],
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment.center,
+                    child: Text(
+                      widget.plant.name,
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.dmSerifDisplay(
+                          color: Colors.black, fontSize: 20),
+                    )
+                  ),
+                  Align(
+                    alignment: Alignment.center,
+                    child: Container(
+                      margin: const EdgeInsets.only(top: 80),
+                      child: Text(
+                        widget.plant.scientificName,
+                        textAlign: TextAlign.left,
+                        style: GoogleFonts.averiaLibre(
+                            color: Colors.black, fontSize: 14),
+                      ),
+                    )
+                  ),
+                ],
+              ),
+              ],
+            ),
+          ),
           Expanded(
             child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -80,20 +127,9 @@ class _PlantDetailsState extends State<PlantDetails> {
                   widget.plant.imagePath,
                   height: 200,
                 ),
-                SizedBox(height: 20),
-                Text(
-                  widget.plant.name,
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.dmSerifDisplay(
-                      color: Colors.black, fontSize: 20),
-                ),
-                Text(
-                  widget.plant.scientificName,
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.dmSerifDisplay(
-                      color: Colors.black, fontSize: 14),
-                ),
-                SizedBox(height: 10),
+                
+                SizedBox(height: 40),
+                
                 RichText(
                   text: TextSpan(children: <TextSpan>[
                     TextSpan(
