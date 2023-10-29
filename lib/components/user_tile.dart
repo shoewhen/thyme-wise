@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:thyme_wise/models/plant.dart';
 
 class UserTile extends StatelessWidget {
@@ -14,15 +15,19 @@ class UserTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       child: Container(
-        decoration: BoxDecoration(
-          color: Colors.transparent,
-        ),
-        child: Row(
+        decoration: BoxDecoration(color: Colors.transparent),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
               plant.imagePath,
               width: 150,
             ),
+            SizedBox(height: 10),
+            Text(
+              plant.name,
+              style: GoogleFonts.dmSerifDisplay(fontSize: 20)
+            )
           ],
         ),
       ),
