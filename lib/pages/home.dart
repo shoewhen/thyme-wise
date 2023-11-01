@@ -3,7 +3,6 @@ import "package:provider/provider.dart";
 import 'package:thyme_wise/components/user_tile.dart';
 import "package:thyme_wise/models/plant.dart";
 import "package:thyme_wise/models/plant_catalog.dart";
-import "package:thyme_wise/pages/settings.dart";
 import "package:thyme_wise/pages/add_plant.dart";
 
 class Home extends StatefulWidget {
@@ -21,7 +20,7 @@ class _HomeState extends State<Home> {
       body: Container(
       decoration: const BoxDecoration(
         image: DecorationImage(
-          image: AssetImage("lib/images/Background.png"),
+          image: AssetImage("lib/images/backgroundreal.png"),
           fit: BoxFit.cover,
         ),
       ),
@@ -31,22 +30,6 @@ class _HomeState extends State<Home> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const SizedBox(height: 25),
-            /*
-            Align(
-              alignment: Alignment.topRight,
-              child: IconButton(
-                padding: const EdgeInsets.all(0.0),
-                icon: Image.asset('lib/images/alola-vulpix.jpeg'),
-                iconSize: 50,
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const Settings()),
-                  );
-                }
-              ),
-            ),
-            */
             Expanded(
               child: Consumer<PlantCatalog>(
                 builder: (context, value, child) => Scaffold(

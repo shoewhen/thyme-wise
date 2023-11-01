@@ -4,9 +4,6 @@ import 'package:thyme_wise/components/add_plant_button.dart';
 import 'package:thyme_wise/models/plant.dart';
 import 'package:thyme_wise/models/plant_catalog.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:hive_flutter/hive_flutter.dart';
-import 'package:thyme_wise/pages/add_plant.dart';
-import 'package:thyme_wise/pages/home.dart';
 
 class PlantDetails extends StatefulWidget {
   final Plant plant;
@@ -37,20 +34,6 @@ class _PlantDetailsState extends State<PlantDetails> {
               Navigator.pop(context);
               Navigator.pop(context);
               Navigator.pop(context);
-
-              /*if (_myBox.get('Plant1', defaultValue: 1) == 1) {
-                _myBox.put('Plant1', context);
-              } else if (_myBox.get('Plant2', defaultValue: 1) == 1) {
-                _myBox.put('Plant2', context);
-              } else if (_myBox.get('Plant3', defaultValue: 1) == 1) {
-                _myBox.put('Plant3', context);
-              } else if (_myBox.get('Plant4', defaultValue: 1) == 1) {
-                _myBox.put('Plant4', context);
-              } else if (_myBox.get('Plant5', defaultValue: 1) == 1) {
-                _myBox.put('Plant5', context);
-              } else if (_myBox.get('Plant6', defaultValue: 1) == 1) {
-                _myBox.put('Plant6', context);
-              }*/
             },
             icon: const Icon(
               Icons.done,
@@ -189,14 +172,6 @@ class _PlantDetailsState extends State<PlantDetails> {
                       style:
                           TextStyle(color: Colors.grey[900], fontSize: 14)),
                 ])),
-                Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Text(
-                    widget.plant.description,
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.dmSerifDisplay(),
-                  ),
-                )
               ],
             ),
           )),

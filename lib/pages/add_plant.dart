@@ -34,6 +34,7 @@ class _AddPlantState extends State<AddPlant> {
     final plantMenu = catalog.plantMenu;
 
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 177, 202, 165),
       body: Padding(
         padding: const EdgeInsets.all(25.0),
         child: Column(
@@ -50,6 +51,7 @@ class _AddPlantState extends State<AddPlant> {
                       IconButton(
                         padding: const EdgeInsets.all(0.0),
                         icon: const Icon(Icons.arrow_back),
+                        color: Colors.white,
                         iconSize: 20,
                         onPressed: () {
                           Navigator.pop(context);
@@ -65,7 +67,7 @@ class _AddPlantState extends State<AddPlant> {
                     "New Plant",
                     textAlign: TextAlign.center,
                     style: GoogleFonts.dmSerifDisplay(
-                        color: Colors.black, fontSize: 20),
+                        color: Colors.white, fontSize: 20),
                   )
                 ),
                 Align(
@@ -76,7 +78,7 @@ class _AddPlantState extends State<AddPlant> {
                       "Ready to add your newest plant child?",
                       textAlign: TextAlign.left,
                       style: GoogleFonts.averiaLibre(
-                          color: Colors.black, fontSize: 14),
+                          color: Colors.white, fontSize: 14),
                     ),
                   )
                 ),
@@ -84,24 +86,6 @@ class _AddPlantState extends State<AddPlant> {
             ),
 
             const SizedBox(height: 25),
-
-            /* Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10.0),
-              child: TextField(
-                decoration: InputDecoration(
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(color: Colors.grey),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(color: Colors.grey),
-                    borderRadius: BorderRadius.circular(20)
-                  ),
-                  hintText: "Search here...",
-                )
-              )
-            ),
-            */
 
             Expanded(
               child: ListView.builder(

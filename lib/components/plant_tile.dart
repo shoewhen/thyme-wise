@@ -18,7 +18,7 @@ class PlantTile extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           color: Colors.grey[100],
-          borderRadius: BorderRadius.circular(20)
+          borderRadius: BorderRadius.circular(40)
         ),
         margin: EdgeInsets.all(10),
         padding: const EdgeInsets.all(10),
@@ -27,7 +27,7 @@ class PlantTile extends StatelessWidget {
             // image
             Image.asset(
               plant.imagePath,
-              width: 100,
+              width: 125,
             ),
     
             const SizedBox(width: 10),
@@ -39,21 +39,23 @@ class PlantTile extends StatelessWidget {
                 children: [
                   Text(
                     plant.name,
-                    style: GoogleFonts.dmSerifDisplay(fontSize: 15),
+                    style: GoogleFonts.dmSerifDisplay(
+                      fontSize: 20,
+                      color: Color.fromRGBO(212, 156, 237, 1)
+                    ),
                   ),
             
                   Text(
                     plant.scientificName,
                     style: GoogleFonts.averiaLibre(
                       fontStyle: FontStyle.italic,
-                      fontSize: 10)
+                      fontSize: 15,
+                      color: Color.fromARGB(255, 114, 166, 113)
+                    )
                   ),
             
                   // description
-                  Text(
-                    plant.description,
-                    style: GoogleFonts.averiaLibre(fontSize: 10),
-                  ),
+                  
                 ],
               ),
             ),
