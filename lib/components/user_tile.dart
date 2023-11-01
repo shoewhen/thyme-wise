@@ -21,12 +21,14 @@ class UserTile extends StatelessWidget {
           children: [
             Image.asset(
               plant.imagePath,
-              width: 150,
+              width: 340,
             ),
-            SizedBox(height: 10),
             Text(
               plant.name,
-              style: GoogleFonts.dmSerifDisplay(fontSize: 20)
+              style: GoogleFonts.dmSerifDisplay(
+                fontSize: 20,
+                color: Colors.white
+              )
             )
           ],
         ),

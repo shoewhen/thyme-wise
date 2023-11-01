@@ -9,7 +9,7 @@ class Intro extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 201, 231, 187),
+      backgroundColor: Color.fromARGB(255, 255, 255, 255),
       body: Padding(
         padding: const EdgeInsets.all(25.0),
         child: Column(
@@ -22,13 +22,15 @@ class Intro extends StatelessWidget {
                 color: Color.fromARGB(255, 114, 166, 113),
               ),
             ),
-            const SizedBox(height: 75),
-            Lottie.asset('lib/images/plantanimation.json'),
+            const SizedBox(height: 20),
+            Image.asset(
+              'lib/images/Logo.png',
+            ),
             Text("A relaxing game and aid to become the best plant parent!",
               textAlign: TextAlign.center,
               style: GoogleFonts.gaegu(
                 fontSize: 20,
-                color: Colors.white,
+                color: Color.fromARGB(255, 177, 202, 165),
               )
             ),
             const SizedBox(height: 40),
